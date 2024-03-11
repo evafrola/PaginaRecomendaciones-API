@@ -17,17 +17,6 @@ const getReviewByID = async(req, res) => {
     }
 }
 
-const verifyToken = (req, res, next) => {
-    try {
-        const token = req.headers["authorization"].split(" ")[1]; // Extrae el token del encabezado
-        const decoded = jwt.verify(token, SECRET_KEY);
-        console.log(decoded);
-        next();
-    } catch (error) {
-        res.status(401).json({ message: "Usuario no autorizado" });
-    }
-};
-
 const createReview = async(req, res) => {
     const createdReview = await reviewModel.createReview(req.body);
     if (createdReview) {
@@ -75,7 +64,6 @@ const deleteReview = async (req, res) => {
 module.exports = {
     getReview,
     getReviewByID,
-    verifyToken,
     createReview,
     updateReview,
     deleteReview

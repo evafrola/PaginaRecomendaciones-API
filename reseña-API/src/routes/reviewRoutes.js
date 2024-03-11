@@ -6,8 +6,6 @@ reviewRouter.get("/", reviewController.getReview);
 
 reviewRouter.get("/:id", reviewController.getReviewByID);
 
-reviewRouter.use(reviewController.verifyToken);
-
 reviewRouter.post("/", reviewController.createReview);
 
 reviewRouter.put("/:id", reviewController.updateReview);
