@@ -1,6 +1,4 @@
 const reviewModel = require("../models/reviewModels");
-const jwt = require('jsonwebtoken');
-const { SECRET_KEY } = require('../config');
 
 const getReview = async(req, res) => {
     const review = await reviewModel.getReview();

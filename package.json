@@ -10,11 +10,15 @@
   "author": "Eva Frola",
   "license": "ISC",
   "dependencies": {
+    "2": "^3.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "mariadb": "^3.2.3"
+    "mariadb": "^3.2.3",
+    "my": "^0.3.3",
+    "mysql2": "^3.9.2",
+    "sql": "^0.78.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
